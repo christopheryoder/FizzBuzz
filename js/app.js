@@ -29,29 +29,23 @@ $(document).ready(function() {
 	$('input:text').keyup(function(event){
         if(event.keyCode == 13) {
 
-            /*get user input*/
             var userNumber = +$(this).val();
 
             numberAlert(userNumber);
 
-            /*run FizzBuzz*/
             fizzBuzz(userNumber);
 
-            /*delete contents of text box after user hits enter*/
             $(this).val('');
         }
    	});
    	$('input:submit').click(function() {
 
-        /*get user input*/
         var userNumber = +$(this).siblings('input:text').val();
 
         numberAlert(userNumber);
 
-        /*run FizzBuzz*/
         fizzBuzz(userNumber);
 
-        /*delete contents of text box after user clicks 'add'*/
         $(this).siblings('input:text').val('');
     });
 });
